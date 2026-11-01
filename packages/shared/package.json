@@ -1,0 +1,14 @@
+{
+  "name": "@todo-app/shared",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Validation rules and constants shared by the client and the server.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}
