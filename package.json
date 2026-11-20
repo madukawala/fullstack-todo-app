@@ -1,0 +1,42 @@
+{
+  "name": "fullstack-todo-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack TODO app (React + Express + MongoDB) set up as an npm workspaces monorepo.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0",
+    "npm": ">=10"
+  },
+  "workspaces": [
+    "packages/*",
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c blue,magenta \"npm run dev -w server\" \"npm run dev -w client\"",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "db:migrate": "npm run db:migrate -w server",
+    "db:migrate:down": "npm run db:migrate:down -w server",
+    "db:migrate:status": "npm run db:migrate:status -w server",
+    "db:seed": "npm run db:seed -w server",
+    "db:seed:fresh": "npm run db:seed:fresh -w server",
+    "setup": "npm run db:migrate && npm run db:seed",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "concurrently": "^10.0.6",
+    "eslint": "^10.13.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10"
+  }
+}

@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Env files (keep the example)
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Test output
+coverage/
+.nyc_output/
+
+# Local uploads, dumps and other runtime data
+uploads/
+dump/
+*.pid
+
+# OS / editor
+.DS_Store
+.idea/

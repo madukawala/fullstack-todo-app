@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+*.local
+
+# Env files (keep the example)
+.env
+.env.*
+!.env.example
+
+# Test and tool output
+coverage/
+.vite/
+vite.config.js.timestamp-*
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+.idea/
